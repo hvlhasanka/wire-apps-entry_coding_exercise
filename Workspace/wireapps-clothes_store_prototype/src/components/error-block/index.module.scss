@@ -1,0 +1,39 @@
+/**
+ * ErrorBlock component style sheet
+ */
+
+@import "../../styles/variables";
+
+.errorBlockContainer {
+  width: 30vw;
+  height: 10vh;
+  border-radius: 20px;
+  border: 1px solid #cdcdcd;
+  background-color: #ffffff;
+  box-shadow: 1px 5px 5px #c8c8c8;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.errorBlockContainerErrorIcon {
+  width: 30%;
+  color: #ff0000;
+  font-size: 4vh;
+  position: absolute;
+  top: 55%;
+  left: 20%;
+  transform: translate(-70%, -50%);
+}
+
+.errorBlockContainerLabel {
+  width: 70%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-40%, -50%);
+  font-size: 1.6vh;
+  font-family: $defaultFontFamily;
+}

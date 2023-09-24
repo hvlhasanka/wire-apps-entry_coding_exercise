@@ -2,13 +2,15 @@
  * Home page component style sheet
  */
 
+@import "../../styles/variables";
+
 .flashSaleContainer {
   height: 50vh;
   padding: 5vh;
 }
 
 .containerHeading {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: $containerHeadingFontFamily;
   font-size: 1.8vh;
 }
 

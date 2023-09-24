@@ -5,8 +5,7 @@
 import React from "react";
 import styles from "./index.module.scss";
 import getProducts from "./../../services/index";
-import { Outlet } from "react-router-dom";
-import { CardSection, CategoryButton, Header } from "../../components";
+import { CardSection, CategoryButton, ErrorBlock, Header, LoadingSpinner } from "../../components";
 import { ClothingItem } from "../../types";
 
 const Home = () => {
@@ -59,7 +58,15 @@ const Home = () => {
         <p className={styles.containerHeading}>
           Flash Sale
         </p>
-        <CardSection cardData={flashSaleFeedData}/>
+        {
+          isLoading ?
+            <LoadingSpinner />
+            :
+            isError ?
+              <ErrorBlock label="Unable to retrieve flash sale products" />
+              :
+              <CardSection cardData={flashSaleFeedData} />
+        }
       </div>
       <div className={styles.categoriesContainer}>
         <p className={styles.containerHeading}>
@@ -73,9 +80,6 @@ const Home = () => {
             cardCategoryType="WOMENS-CATEGORY"
           />
         </div>
-      </div>
-      <div>
-        <Outlet />
       </div>
     </Header>
   );

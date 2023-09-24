@@ -1,0 +1,16 @@
+/**
+ * WomensClothing page component style sheet
+ */
+
+@import "../../styles/variables";
+
+.womensClothingContainer {
+  height: 50vh;
+  padding: 5vh;
+  margin-bottom: 55vh;
+};
+
+.womensContainerHeading {
+  font-family: $containerHeadingFontFamily;
+  font-size: 1.8vh;
+}
