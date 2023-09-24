@@ -1,0 +1,73 @@
+/**
+ * Card component style sheet
+ */
+
+@import "../../styles/variables";
+@import "../../styles/color";
+
+.cardContainer {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+  background-color: #ffffff;
+  box-shadow:  1px 5px 5px #d2d2d2;
+};
+
+.cardHeading {
+  margin: 10%;
+  height: 6vh;
+  color: #000000;
+  font-family: $defaultFontFamily;
+  font-size: 1.7vh;
+  text-align: center;
+  font-weight: bold;
+
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+};
+
+.cardImage {
+  width: 16vh;
+  height: 20vh;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 10%;
+};
+
+.cardFooterBlock {
+  padding: 5% 10% 10% 10%;
+  border-radius: 20px;
+  text-align: center;
+};
+
+.cardFooterBlockMens {
+  background-color: $mensClothingCategoryThemeColor;
+};
+
+.cardFooterBlockWomens {
+  background-color: $womensClothingCategoryThemeColor;
+};
+
+.cardPrice {
+  margin-bottom: 5%;
+  color: #0d42fe;
+  font-family: $defaultFontFamily;
+  font-size: 2vh;
+  font-weight: bold;
+};
+
+.cardDescription {
+  height: 100px;
+  color: #000000;
+  font-family: $defaultFontFamily;
+  font-size: 17px;
+  
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+};

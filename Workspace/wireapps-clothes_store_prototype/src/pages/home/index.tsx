@@ -6,10 +6,11 @@ import React from "react";
 import styles from "./index.module.scss";
 import getProducts from "./../../services/index";
 import { Link, Outlet } from "react-router-dom";
-import { Header } from "../../components";
+import { CardSection, Header } from "../../components";
+import { ClothingItem } from "../../types";
 
 const Home = () => {
-  const [flashSaleFeedData, setFlashSaleFeedData] = React.useState<Array<any>>([]);
+  const [flashSaleFeedData, setFlashSaleFeedData] = React.useState<Array<ClothingItem>>([]);
   const [isLoading, setIsLoading] = React.useState<boolean>(false);
   const [isError, setIsError] = React.useState<boolean>(false);
 
@@ -58,17 +59,9 @@ const Home = () => {
         <p className={styles.flashSaleContainerHeading}>
           Flash Sale
         </p>
-        <div className={styles.flashSaleContainerCardsSection}>
-          {flashSaleFeedData.map((data) => {
-            return (
-              <div>
-                {data.category}
-              </div>
-            );
-          })}
-        </div>
+        <CardSection cardData={flashSaleFeedData}/>
       </div>
-      <div>
+      <div className={styles.categoriesContainer}>
         <Link to={"mens-clothing"}>
           Mens Clothing
         </Link>
