@@ -1,0 +1,9 @@
+/* StyleSheet for Global Styles */
+
+/* Reset page document to default margin and padding 
+  to full page window and default background color */
+* {
+  margin: 0px;
+  padding: 0px;
+  background-color: #f5f5f5;
+}
