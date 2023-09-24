@@ -12,7 +12,7 @@
 [6. Usage](#6-usage--)<br>
   &nbsp;&nbsp;&nbsp;&nbsp;[6.1. Functional features](#61-functional-features--)<br>
   &nbsp;&nbsp;&nbsp;&nbsp;[6.2. Non-functional features](#62-non-functional-features--)<br>
-  &nbsp;&nbsp;&nbsp;&nbsp;[6.3. Screenshots](#63-screenshots--)<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;[6.3. Screenshots of Modern Walk Clothes Store](#63-screenshots-of-modern-walk-clothes-store--)<br>
 [7. Git Commit Strategy](#7-git-commit-strategy--)<br>
 [8. Credits](#8-credits--)<br>
 [9. License](#9-license--)<br>
