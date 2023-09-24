@@ -21,19 +21,15 @@ const getProducts = async (args: Args): Promise<SuccessResponse | ErrorResponse>
   let resultCategoryAmended = resultCategory.replace(" ", "%20");
   let productsArr: Array<any> = [];
   let resError: any;
-  console.log(resultCategory);
-  console.log(resultCategoryAmended);
 
   const urlPath = 
     `${apiBaseUrl}/products/category/${resultCategoryAmended}?limit=${resultLimit}`;
-  console.log(urlPath);
 
   await axios.get(urlPath).then((response) => {
     productsArr = response.data as Array<ClothingItem>;
   }).catch((error) => {
     resError = error;
   });
-  console.log(productsArr);
   if (resError) {
     return [true, resError];
   }

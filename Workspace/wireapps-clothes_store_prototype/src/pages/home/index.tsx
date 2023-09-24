@@ -5,7 +5,7 @@
 import React from "react";
 import styles from "./index.module.scss";
 import getProducts from "./../../services/index";
-import { CardSection, CategoryButton, Header, LoadingSpinner } from "../../components";
+import { CardSection, CategoryButton, ErrorBlock, Header, LoadingSpinner } from "../../components";
 import { ClothingItem } from "../../types";
 
 const Home = () => {
@@ -62,7 +62,10 @@ const Home = () => {
           isLoading ?
             <LoadingSpinner />
             :
-            <CardSection cardData={flashSaleFeedData}/>
+            isError ?
+              <ErrorBlock label="Unable to retrieve flash sale products" />
+              :
+              <CardSection cardData={flashSaleFeedData} />
         }
       </div>
       <div className={styles.categoriesContainer}>

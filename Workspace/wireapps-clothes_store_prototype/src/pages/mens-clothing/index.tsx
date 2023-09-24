@@ -3,7 +3,7 @@
  */
 
 import React from "react";
-import { CardSection, Header, LoadingSpinner } from "../../components";
+import { CardSection, ErrorBlock, Header, LoadingSpinner } from "../../components";
 import styles from "./index.module.scss";
 import { ClothingItem } from "../../types";
 import getProducts from "../../services";
@@ -51,7 +51,12 @@ const MensClothing = () => {
           isLoading ?
             <LoadingSpinner />
             :
-            <CardSection cardData={mensClothingFeedData}/>
+            isError ?
+              <ErrorBlock label="Unable to retrieve men's clothing products" />
+              :
+              <CardSection 
+                cardData={mensClothingFeedData}
+              />
         }
       </div>
     </Header>
