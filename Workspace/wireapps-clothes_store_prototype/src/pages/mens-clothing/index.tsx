@@ -1,3 +1,7 @@
+/**
+ * MensClothing component
+ */
+
 import { Header } from "../../components";
 
 const MensClothing = () => {

@@ -1,3 +1,7 @@
+/**
+ * Card component
+ */
+
 import { ClothingItem } from "../../types";
 import styles from "./index.module.scss"
 

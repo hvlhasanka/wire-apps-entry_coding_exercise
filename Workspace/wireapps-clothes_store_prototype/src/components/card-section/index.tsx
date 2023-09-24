@@ -1,3 +1,7 @@
+/**
+ * Card Section component
+ */
+
 import React from "react";
 import { Card } from "..";
 import { ClothingItem, ItemCategory } from "../../types";

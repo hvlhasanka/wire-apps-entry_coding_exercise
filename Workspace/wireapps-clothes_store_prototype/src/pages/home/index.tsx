@@ -5,8 +5,8 @@
 import React from "react";
 import styles from "./index.module.scss";
 import getProducts from "./../../services/index";
-import { Link, Outlet } from "react-router-dom";
-import { CardSection, Header } from "../../components";
+import { Outlet } from "react-router-dom";
+import { CardSection, CategoryButton, Header } from "../../components";
 import { ClothingItem } from "../../types";
 
 const Home = () => {
@@ -56,18 +56,23 @@ const Home = () => {
   return (
     <Header>
       <div className={styles.flashSaleContainer}>
-        <p className={styles.flashSaleContainerHeading}>
+        <p className={styles.containerHeading}>
           Flash Sale
         </p>
         <CardSection cardData={flashSaleFeedData}/>
       </div>
       <div className={styles.categoriesContainer}>
-        <Link to={"mens-clothing"}>
-          Mens Clothing
-        </Link>
-        <Link to={"womens-clothing"}>
-          Womens Clothing
-        </Link>
+        <p className={styles.containerHeading}>
+          Categories
+        </p>
+        <div className={styles.categoryButtonSection}>
+          <CategoryButton
+            cardCategoryType="MENS-CATEGORY"
+          />
+          <CategoryButton
+            cardCategoryType="WOMENS-CATEGORY"
+          />
+        </div>
       </div>
       <div>
         <Outlet />

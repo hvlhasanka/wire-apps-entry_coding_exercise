@@ -1,3 +1,7 @@
+/**
+ * Header component
+ */
+
 import styles from "./index.module.scss";
 import { Link } from "react-router-dom";
 
@@ -6,9 +10,7 @@ interface Args {
 };
 
 const Header = (args: Args) => {
-  const {
-    children,
-  } = args;
+  const { children } = args;
 
   return (
     <>

@@ -1,3 +1,7 @@
+/**
+ * Get Products service data function
+ */
+
 import axios from "axios";
 import configs from "../../configs";
 import { ClothingItem } from "../../types";
