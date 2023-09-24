@@ -1,5 +1,5 @@
 /**
- * Home page component
+ * Home (Landing) page component
  */
 
 import React from "react";
