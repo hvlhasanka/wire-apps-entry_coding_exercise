@@ -1,0 +1,32 @@
+/**
+ * Category Button component style sheet
+ */
+
+@import "../../styles/color";
+@import "../../styles/variables";
+
+.categoryButton {
+  height: 15vh;
+  border-radius: 20px;
+  width: 50vw;
+  box-shadow: 1px 5px 5px #d2d2d2;
+  text-align: center;
+  text-decoration: none;
+};
+
+.categoryButtonMens {
+  background-color: $mensClothingCategoryThemeColor;
+}
+
+.categoryButtonWomens {
+  background-color: $womensClothingCategoryThemeColor;
+}
+
+.categoryHeading {
+  font-family: $defaultFontFamily;
+  color: #ffffff;
+  font-size: 45px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+};

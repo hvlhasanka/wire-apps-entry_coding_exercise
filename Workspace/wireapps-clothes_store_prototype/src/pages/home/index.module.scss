@@ -3,17 +3,23 @@
  */
 
 .flashSaleContainer {
-  height: 40vh;
+  height: 50vh;
   padding: 5vh;
 }
 
-.flashSaleContainerHeading {
+.containerHeading {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 1.8vh;
 }
 
-.flashSaleContainerCardsSection {
-  background-color: aquamarine;
-  height: 10vh;
-  padding-top: 5vh;
+.categoriesContainer {
+  height: 50vh;
+  padding: 5vh;
+}
+
+.categoryButtonSection {
+  display: flex;
+  flex-direction: row;
+  gap: 5%;
+  padding-top: 3vh;
 }

@@ -1,4 +1,4 @@
-import { Configs } from "./types";
+import { Configs } from "../types";
 import devConfigs from "./development";
 import prodConfigs from "./production";
 

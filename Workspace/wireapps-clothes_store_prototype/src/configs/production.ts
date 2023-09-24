@@ -1,4 +1,4 @@
-import { Configs } from "./types";
+import { Configs } from "../types";
 
 const configs: Configs = {
   apiBaseUrl: "https://fakestoreapi.com",

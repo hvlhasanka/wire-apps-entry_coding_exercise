@@ -1,0 +1,11 @@
+/**
+ * Limits the number of lines rendered in a element.
+ * Accepts "lineLimit" argument to set the number of line to be shown.
+ * Adds "..." at the end of the line limit.
+ */
+@mixin limitTextLines($lineLimit) {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $lineLimit;
+}

@@ -1,11 +1,16 @@
+/**
+ * Get Products service data function
+ */
+
 import axios from "axios";
 import configs from "../../configs";
+import { ClothingItem } from "../../types";
 
 type Args = {
   resultCategory: string;
   resultLimit: number;
 };
-type SuccessResponse = [boolean, Array<any>];
+type SuccessResponse = [boolean, Array<ClothingItem>];
 type ErrorResponse = [boolean, any];
 
 const { apiBaseUrl } = configs;
