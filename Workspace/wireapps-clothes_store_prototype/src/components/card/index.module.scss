@@ -4,6 +4,7 @@
 
 @import "../../styles/variables";
 @import "../../styles/color";
+@import "../../styles/mixins";
 
 .cardContainer {
   position: relative;
@@ -23,10 +24,7 @@
   text-align: center;
   font-weight: bold;
 
-  display: -webkit-box;
-  overflow: hidden;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
+  @include limitTextLines(3);
 };
 
 .cardImage {
@@ -66,8 +64,5 @@
   font-family: $defaultFontFamily;
   font-size: 17px;
   
-  display: -webkit-box;
-  overflow: hidden;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 5;
+  @include limitTextLines(5);
 };
