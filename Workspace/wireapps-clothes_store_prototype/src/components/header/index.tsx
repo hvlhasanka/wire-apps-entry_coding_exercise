@@ -6,7 +6,7 @@ import styles from "./index.module.scss";
 import { Link } from "react-router-dom";
 
 interface Args {
-  children: Array<JSX.Element>;
+  children: JSX.Element | Array<JSX.Element>;
 };
 
 const Header = (args: Args) => {

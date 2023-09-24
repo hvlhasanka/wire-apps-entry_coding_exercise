@@ -5,7 +5,6 @@
 import React from "react";
 import styles from "./index.module.scss";
 import getProducts from "./../../services/index";
-import { Outlet } from "react-router-dom";
 import { CardSection, CategoryButton, Header } from "../../components";
 import { ClothingItem } from "../../types";
 
@@ -73,9 +72,6 @@ const Home = () => {
             cardCategoryType="WOMENS-CATEGORY"
           />
         </div>
-      </div>
-      <div>
-        <Outlet />
       </div>
     </Header>
   );

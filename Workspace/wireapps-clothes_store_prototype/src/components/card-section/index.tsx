@@ -1,5 +1,5 @@
 /**
- * Card Section component
+ * CardSection component
  */
 
 import React from "react";

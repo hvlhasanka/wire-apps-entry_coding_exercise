@@ -4,10 +4,10 @@
 
 import axios from "axios";
 import configs from "../../configs";
-import { ClothingItem } from "../../types";
+import { ClothingItem, ItemCategory } from "../../types";
 
 type Args = {
-  resultCategory: string;
+  resultCategory: ItemCategory;
   resultLimit: number;
 };
 type SuccessResponse = [boolean, Array<ClothingItem>];
@@ -17,16 +17,23 @@ const { apiBaseUrl } = configs;
 
 const getProducts = async (args: Args): Promise<SuccessResponse | ErrorResponse> => {
   const { resultCategory, resultLimit } = args;
-
+  
+  let resultCategoryAmended = resultCategory.replace(" ", "%20");
   let productsArr: Array<any> = [];
   let resError: any;
+  console.log(resultCategory);
+  console.log(resultCategoryAmended);
 
-  await axios.get(`${apiBaseUrl}/products/category/${resultCategory}?limit=${resultLimit}`).then((response) => {
-    productsArr = response.data;
+  const urlPath = 
+    `${apiBaseUrl}/products/category/${resultCategoryAmended}?limit=${resultLimit}`;
+  console.log(urlPath);
+
+  await axios.get(urlPath).then((response) => {
+    productsArr = response.data as Array<ClothingItem>;
   }).catch((error) => {
     resError = error;
   });
-
+  console.log(productsArr);
   if (resError) {
     return [true, resError];
   }

@@ -1,0 +1,16 @@
+/**
+ * MensClothing page component style sheet
+ */
+
+@import "../../styles/variables";
+
+.mensClothingContainer {
+  height: 50vh;
+  padding: 5vh;
+  margin-bottom: 55vh;
+};
+
+.mensContainerHeading {
+  font-family: $containerHeadingFontFamily;
+  font-size: 1.8vh;
+}

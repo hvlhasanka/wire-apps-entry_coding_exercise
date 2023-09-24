@@ -1,5 +1,5 @@
 /**
- * Category Button component
+ * CategoryButton component
  */
 
 import React from "react";
