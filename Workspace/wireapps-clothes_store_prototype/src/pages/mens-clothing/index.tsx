@@ -3,7 +3,7 @@
  */
 
 import React from "react";
-import { CardSection, Header } from "../../components";
+import { CardSection, Header, LoadingSpinner } from "../../components";
 import styles from "./index.module.scss";
 import { ClothingItem } from "../../types";
 import getProducts from "../../services";
@@ -47,7 +47,12 @@ const MensClothing = () => {
         <p className={styles.mensContainerHeading}>
           Men's Clothing
         </p>
-        <CardSection cardData={mensClothingFeedData} />
+        {
+          isLoading ?
+            <LoadingSpinner />
+            :
+            <CardSection cardData={mensClothingFeedData}/>
+        }
       </div>
     </Header>
   );

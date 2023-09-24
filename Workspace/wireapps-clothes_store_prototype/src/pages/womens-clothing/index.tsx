@@ -3,13 +3,13 @@
  */
 
 import React from "react";
-import { CardSection, Header } from "../../components";
+import { CardSection, Header, LoadingSpinner } from "../../components";
 import styles from "./index.module.scss";
 import { ClothingItem } from "../../types";
 import getProducts from "../../services";
 
 const WomensClothing = () => {
-  const [WomensClothingFeedData, setWomensClothingFeedData] = React.useState<Array<ClothingItem>>([]);
+  const [womensClothingFeedData, setWomensClothingFeedData] = React.useState<Array<ClothingItem>>([]);
   const [isLoading, setIsLoading] = React.useState<boolean>(false);
   const [isError, setIsError] = React.useState<boolean>(false);
 
@@ -47,7 +47,12 @@ const WomensClothing = () => {
         <p className={styles.womensContainerHeading}>
           Women's Clothing
         </p>
-        <CardSection cardData={WomensClothingFeedData} />
+        {
+          isLoading ?
+            <LoadingSpinner />
+            :
+            <CardSection cardData={womensClothingFeedData}/>
+        }
       </div>
     </Header>
   );

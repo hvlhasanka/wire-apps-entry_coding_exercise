@@ -1,0 +1,15 @@
+/**
+ * LoadingSpinner component style sheet
+ */
+
+.loadingSpinnerContainer {
+  position: relative;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.loadingSpinner {
+  width: 5%;
+  height: 5%;
+};

@@ -5,7 +5,7 @@
 import React from "react";
 import styles from "./index.module.scss";
 import getProducts from "./../../services/index";
-import { CardSection, CategoryButton, Header } from "../../components";
+import { CardSection, CategoryButton, Header, LoadingSpinner } from "../../components";
 import { ClothingItem } from "../../types";
 
 const Home = () => {
@@ -58,7 +58,12 @@ const Home = () => {
         <p className={styles.containerHeading}>
           Flash Sale
         </p>
-        <CardSection cardData={flashSaleFeedData}/>
+        {
+          isLoading ?
+            <LoadingSpinner />
+            :
+            <CardSection cardData={flashSaleFeedData}/>
+        }
       </div>
       <div className={styles.categoriesContainer}>
         <p className={styles.containerHeading}>
